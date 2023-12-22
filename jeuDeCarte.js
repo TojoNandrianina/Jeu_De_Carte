@@ -5,6 +5,9 @@ let scoreIA = 0;
 
 
 do {
+    /**
+     * Affiche l'accueil du jeu.
+     */
     function menu() {
         console.log("                                                   ");
         console.log("----- --- -  -   --  ---   -- ---- --- ----- ----");
@@ -47,23 +50,35 @@ do {
         }
     }
 } while (choix = !4);
-
+/**
+ * Affiche un message choisi aleatoirement pour dire que vous avez perdu la manche.
+ * @returns {string}
+ */
 function failed() {
     let snide = ["vous êtes battu par le BOT", "Vous avez perdu! ", " essaye encore ", "pas mal mais il a gagné", "BOT est malin "];
     return snide[Math.floor(Math.random() * snide.length)];
 }
-
+/**
+ * Affiche un message choisi aleatoirement pour dire que vous avez gagnez la manche.
+ * @returns {string}
+ */
 function victoir() {
     let congrats = ["Cool tu es le meilleur", "Congratulation ", "Wonderfull!", "Vous avez gagner! ", "not bad!! , you win !!", `Allez ${pseudo} vous êtes le meilleur `];
     return congrats[Math.floor(Math.random() * congrats.length)];
 }
+/**
+ * Affiche un message choisi aleatoirement pour dire qu'il y a match nul.
+ * @returns {string}
+ */
 function eguality() {
     let Equal = ["Egalité!!!!", "tous les deaux vous êtes le meilleur !!", "match null"];
     return Equal[Math.floor(Math.random() * Equal.length)];
 
 }
 
-
+/**
+ * Fonction qui permet de jouer au jeu de carte avec le BOT.
+ */
 function jouer() {
     let reste = 3;
     let IA = ["feu", "eau", "plante"]
@@ -144,7 +159,9 @@ function jouer() {
         jouer();
     }
 }
-
+/**
+ * Affiche le guide du jeu.
+ */
 function guide() {
 
 
